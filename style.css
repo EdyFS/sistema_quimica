@@ -1,0 +1,46 @@
+body{
+    background-color: lightblue;
+    display: flex;
+    margin: 0;
+}
+
+#header{
+    display: flex;
+    position: static;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav{
+    display: block;
+    position: static;
+    margin: 0;
+    padding: 0; 
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    list-style-type: none;
+}
+
+nav ul li{
+    margin: none;
+    padding: 0.1em;
+    border: solid black 0.1em;
+    
+}
+
+.hidden{
+    display: none;
+}

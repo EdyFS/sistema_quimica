@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"> </div>
+    <h2>Temperaturas de Fusão e Ebulição</h2>
+    <h3>Estados Físicos</h3>
+    <p>São as formas como a matéria é encontrada na natureza em condições normais de temperatura e pressão. A tabela lista os estados físicos e algumas de suas características.</p>
+    <table>
+        <tr>
+            <th>Estado Físico</th>
+            <th>Partículas</th>
+            <th>Forma</th>
+            <th>Volume</th>
+            <th>Exemplos</th>
+        </tr>
+        <tr>
+            <td>Sólido</td>
+            <td>Unidas, pouca mobilidade</td>
+            <td>Forma própria</td>
+            <td>Volume próprio</td>
+            <td>Pedra, ferro</td>
+        </tr>
+        <tr>
+            <td>Líquido</td>
+            <td>Unidas, possuem mobilidade</td>
+            <td>Forma do recipiente</td>
+            <td>Volume próprio</td>
+            <td>Água, leite</td>
+        </tr>
+        <tr>
+            <td>Gasoso</td>
+            <td>Livres, muita mobilidade</td>
+            <td>Forma do recipiente</td>
+            <td>Volume do recipiente</td>
+            <td>Ar, fumaça</td>
+        </tr>
+    </table>
+    <h3>Mudanças de Estados Físicos</h3>
+    <p>Considerando a pressão constante uma substância pode mudar de estado com a variação de temperatura</p>
+    <h3>Temperaturas de Fusão e Ebulição</h3>
+    <p>Temperatura de fusão é a temperatura em que ocorre a mudança do estado sólido para estado líquido. É o mesmo valor da passagem do estado líquido para o estado sólido.</p>
+    <p>Temperatura de ebulição é a temperatura em que ocorre a mudança do estado líquido para o estado gasoso. É o mesmo valor da passagem do estado gasoso para o estado líquido.</p>
+    <h3>Determinação do Estado Físico</h3>
+    <p>Pela comparação entre uma temperatura determinada e os valores de temperatura de fusão e ebulição é possível determinar o estado físico da substância.</p>
+    <form>
+        <label for="temperaturaFusao">Escreva a temperatura de fusão</label>
+        <input type="number" id="temperaturaFusao"  placeholder="Temperatura de fusão">
+        <label for="temperaturaEbulicao">Escreva a temperatura de ebulição</label>
+        <input type="number" id="temperaturaEbulicao" placeholder="Temperatura de ebulição">
+        <label for="temperatura">Escreva a temperatura desejada</label>
+        <input type="number" id="temperatura" placeholder="Temperatura desejada">
+        <button type="button" onclick="determinarEstado()">Determinar estado físico</button>
+
+        
+
+    </form>
+    <div id="resposta">
+            <p>Resposta: </p>
+    </div>
+    <div id="footer"></div>
+    
+
+    <script src="main.js">
+        
+    </script>
+    
+</body>
+</html>
