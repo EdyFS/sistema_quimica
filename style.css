@@ -10,6 +10,7 @@ body{
     justify-content: center;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 header{
     display: flex;
@@ -38,9 +39,22 @@ nav ul li{
     margin: none;
     padding: 0.1em;
     border: solid black 0.1em;
-    
 }
 
 .hidden{
     display: none;
+}
+
+.corpo{
+    display: block;
+}
+main{
+    display: block;
+    justify-content: center;
+
+}
+
+footer{
+    margin-bottom: 0;
+    position: static;
 }
