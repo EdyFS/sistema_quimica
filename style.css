@@ -49,11 +49,24 @@ nav ul li{
     display: block;
 }
 main{
-    display: block;
+    display: flex;
     justify-content: center;
-
+    align-items: center;
+    width: 100em;
 }
 
+table{
+    border: solid black;
+}
+
+th, td{
+    border: solid black;
+}
+
+.main{
+    display: block;
+
+}
 footer{
     margin-bottom: 0;
     position: static;
