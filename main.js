@@ -43,6 +43,7 @@ function selecionarCalculo(){
     document.querySelector('.calculo1').classList.add('hidden');
     document.querySelector('.calculo2').classList.add('hidden');
     document.querySelector('.calculo3').classList.add('hidden');
+    
     if (select == "1"){
         document.querySelector('.calculo1').classList.remove('hidden');
     }
@@ -77,34 +78,34 @@ function calcularConcentracao(){
     console.log(tipo);
     console.log(selecionado);*/
     if (/*tipo == "calculo1" && selecionado != "hidden"*/ !document.querySelector('.calculo1.hidden')){
-        massa = parseFloat(document.getElementById('massa').value);
-        volume = parseFloat(document.getElementById('volume').value);
+        let massaConcentracao = parseFloat(document.getElementById('massaConcentracao').value);
+        let volumeConcentracao = parseFloat(document.getElementById('volumeConcentracao').value);
         console.log(massa);
         console.log(volume);
-        concentracao = massa / volume;
+        concentracao = massaConcentracao / volumeConcentracao;
         alert(`A concentração é ${concentracao}`);
         
     } 
     else if (/*tipo == "calculo2" && selecionado != "hidden"*/ !document.querySelector('.calculo2.hidden')){
-        concentracao = parseFloat(document.getElementById('concentracao').value);
-        volume = parseFloat(document.getElementById('volume').value);
+        let concentracaoMassa = parseFloat(document.getElementById('concentracaoMassa').value);
+        let volumeMassa = parseFloat(document.getElementById('volumeMassa').value);
         console.log(concentracao);
         console.log(volume);
-        massa = concentracao * volume;
+        massa = concentracaoMassa * volumeMassa;
         alert(`A massa é ${massa}`);
     }
     else if (/*tipo == "calculo3" && selecionado != "hidden"*/!document.querySelector('.calculo3.hidden')){
-        massa = parseFloat(document.getElementById('massa').value);
-        concentracao = parseFloat(document.getElementById('concentracao').value);
+        let massaVolume = parseFloat(document.getElementById('massaVolume').value);
+        let concentracaoVolume = parseFloat(document.getElementById('concentracaoVolume').value);
         console.log(massa);
         console.log(concentracao);
-        volume = massa / concentracao;
+        volume = massaVolume / concentracaoVolume;
         alert(`O volume é ${volume}`);
     }
-    limparCampos();
+    
 }
 
-function calcularConcentracao() {
+/*function calcularConcentracao() {
     // Obtendo os inputs diretamente
     let massaInput = document.getElementById('massa');
     let volumeInput = document.getElementById('volume');
@@ -141,5 +142,5 @@ function calcularConcentracao() {
 
     // 🔹 Limpa os inputs após o cálculo
     limparCampos();
-}
+}*/
 
