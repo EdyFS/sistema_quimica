@@ -1,5 +1,5 @@
 body{
-    background-color: lightblue;
+    background-color: lightcyan;
     display: flex;
     margin: 0;
 }
@@ -11,6 +11,8 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: navy;
+    color: aliceblue;
 }
 header{
     display: flex;
@@ -25,7 +27,8 @@ nav{
     display: block;
     position: static;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    width: 15em;
 }
 
 nav ul{
@@ -70,4 +73,10 @@ th, td{
 footer{
     margin-bottom: 0;
     position: static;
+    display: block;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
 }
