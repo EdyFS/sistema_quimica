@@ -14,26 +14,32 @@ function determinarEstado(){
     let temperaturaFusao = parseFloat(document.getElementById('temperaturaFusao').value);
     let temperaturaEbulicao = parseFloat(document.getElementById('temperaturaEbulicao').value);
     let temperatura = parseFloat(document.getElementById('temperatura').value);
+    let resposta = document.getElementById('respostaEstadoFisico');
     if (temperaturaFusao >= temperaturaEbulicao){
         alert('A temperatura de fusão deve ser menor que a temperatura de ebulição');
     }
     else{
         if (temperatura < temperaturaFusao){
-            alert(`A substância está no estado sólido a ${temperatura}°C`)
+            //alert(`A substância está no estado sólido a ${temperatura}°C`)
+            resposta.innerHTML = `A substância está no estado sólido a ${temperatura}°C. A temperatura é menor que a Temperatura de Fusão, ou seja, o material não derreteu ainda, está sólido.`;
         }
         else if (temperatura > temperaturaFusao && temperatura < temperaturaEbulicao){
-            alert(`A substância está no estado líquido a ${temperatura}°C`);
+            //alert(`A substância está no estado líquido a ${temperatura}°C`);
+            resposta.innerHTML = `A substância está no estado líquido a ${temperatura}°C. A tempertaura é maior que a Temperatura de Fusão e já derreteu. Porém, é menor que a Temperatura de Ebulição, ainda não ferveu.`;
         }
         else if (temperatura > temperaturaEbulicao){
-            alert(`A substância está no estado gasoso a ${temperatura}°C`);
+            //alert(`A substância está no estado gasoso a ${temperatura}°C. `);
             console.log(temperatura);
             console.log(temperaturaEbulicao);
+            resposta.innerHTML = `A substância está no estado gasoso a ${temperatura}°C.A temperatura é maior que a Temperatura de ebulição, ou seja, já ferveu e virou vapor.`;
         }
         else if (temperatura == temperaturaFusao){
-            alert(`A substância está apresenta uma mistura entre os estados sólido e líquido a ${temperatura}°C`);
+            //alert(`A substância está apresenta uma mistura entre os estados sólido e líquido a ${temperatura}°C`);
+            resposta.innerHTML = `A substância está apresenta uma mistura entre os estados sólido e líquido a ${temperatura}°C. A substância está derretendo.`;
         }
         else if (temperatura == temperaturaEbulicao){
-            alert(`A substância está apresenta uma mistura entre os estados líquido e gasoso a ${temperatura}°C`)
+            //alert(`A substância está apresenta uma mistura entre os estados líquido e gasoso a ${temperatura}°C`);
+            resposta.innerHTML = `A substância está apresenta uma mistura entre os estados líquido e gasoso a ${temperatura}°C. A substância está fervendo`
         }
     }
 }

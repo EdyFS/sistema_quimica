@@ -66,10 +66,30 @@ th, td{
 footer{
     margin-bottom: 0;
     position: static;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 #footer{
+    display: block;
+    
+}
+
+.foot{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.links{
+    display: block;
+    padding: 1em;
+}
+
+#estados button{
+    margin: 1em;
+}
+
+#estados input{
+    margin: 1em;
 }

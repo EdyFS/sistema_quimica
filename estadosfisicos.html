@@ -53,20 +53,24 @@
     <p>Temperatura de ebulição é a temperatura em que ocorre a mudança do estado líquido para o estado gasoso. É o mesmo valor da passagem do estado gasoso para o estado líquido.</p>
     <h3>Determinação do Estado Físico</h3>
     <p>Pela comparação entre uma temperatura determinada e os valores de temperatura de fusão e ebulição é possível determinar o estado físico da substância.</p>
-    <form>
-        <label for="temperaturaFusao">Escreva a temperatura de fusão</label>
+    <form id="estados">
+        <label for="temperaturaFusao">Escreva a temperatura de fusão:</label>
         <input type="number" id="temperaturaFusao"  placeholder="Temperatura de fusão">
-        <label for="temperaturaEbulicao">Escreva a temperatura de ebulição</label>
+        <br>
+        <label for="temperaturaEbulicao">Escreva a temperatura de ebulição:</label>
         <input type="number" id="temperaturaEbulicao" placeholder="Temperatura de ebulição">
-        <label for="temperatura">Escreva a temperatura desejada</label>
+        <br>
+        <label for="temperatura">Escreva a temperatura desejada:</label>
         <input type="number" id="temperatura" placeholder="Temperatura desejada">
+        <br>
         <button type="button" onclick="determinarEstado()">Determinar estado físico</button>
 
         
 
     </form>
-    <div id="resposta">
-            <p>Resposta: </p>
+    <h3>Resposta: </h3>
+    <div id="respostaEstadoFisico">
+            
     </div>
 </div>
 </main>
