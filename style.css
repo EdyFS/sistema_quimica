@@ -4,23 +4,15 @@ body{
     margin: 0;
 }
 
-#header{
+
+header{
     display: flex;
     position: static;
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100%;
     background-color: navy;
     color: aliceblue;
-}
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 nav{
@@ -50,12 +42,13 @@ nav ul li{
 
 .corpo{
     display: block;
+    width: 100%;
 }
 main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100em;
+    width: 100%;
 }
 
 table{
