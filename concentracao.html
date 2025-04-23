@@ -28,7 +28,7 @@
             <option value="3">Calcular volume</option>
         </select>
     </form>
-    <form  class="calculo1 hidden" >
+    <form  class="calculo1 hidden concentracao" >
         <h4>Calcular concentração</h4>
         <p>Para calcular a concentração deve-se dividir a massa pelo volume. É necessário saber a massa e o volume.</p>
         <label>Escreva o valor da massa</label>
@@ -37,7 +37,7 @@
         <input type="number" id="volumeConcentracao" placeholder="Volume">
         <button type="button" onclick="calcularConcentracao()">Calcular</button>
     </form>
-    <form class="calculo2 hidden">
+    <form class="calculo2 hidden concentracao">
         <h4>Calcular massa</h4>
         <p>Para calcular a massa é necessário saber a concentração e o volume. Reorganizando a fórmula temos a multiplicação da massa e do volume.</p>
         <label>Escreva o valor da concentração</label>
@@ -46,7 +46,7 @@
         <input type="number" id="volumeMassa" placeholder="Volume">
         <button type="button" onclick="calcularConcentracao()">Calcular</button>
     </form>
-    <form class="calculo3 hidden">
+    <form class="calculo3 hidden concentracao">
         <h4>Calcular volume</h4>
         <p>Para calcular o volume é necessário saber a concentração e a massa. Divide-se a massa pela concentração</p>
         <label>Escreva o valor da massa</label>
@@ -55,6 +55,10 @@
         <input type="number" id="concentracaoVolume" placeholder="Concentração">
         <button type="button" onclick="calcularConcentracao()">Calcular</button>
     </form>
+    <h3>Resposta: </h3>
+    <div id="respostaConcentracao">
+            
+    </div>
 </div>
 </main>
 <div id="footer"></div>

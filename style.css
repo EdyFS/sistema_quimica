@@ -93,3 +93,12 @@ footer{
 #estados input{
     margin: 1em;
 }
+
+.concentracao input{
+    margin: 1em;
+    display: block;
+}
+.concentracao button{
+    margin: 1em;
+    display: block;
+}

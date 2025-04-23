@@ -77,6 +77,7 @@ function calcularConcentracao(){
     let massa;
     let volume;
     let concentracao;
+    let resposta = document.getElementById('respostaConcentracao');
     /*let calculo = document.querySelectorAll('.calculoConcentracao');
     console.log(calculo);
     let tipo = calculo.classList[1];
@@ -89,7 +90,8 @@ function calcularConcentracao(){
         console.log(massa);
         console.log(volume);
         concentracao = massaConcentracao / volumeConcentracao;
-        alert(`A concentração é ${concentracao}`);
+        //alert(`A concentração é ${concentracao}`);
+        resposta.innerHTML = `A concentração é ${concentracao}. O resultado foi obtido pela divisão da massa ${massaConcentracao} pelo volume ${volumeConcentracao}`;
         
     } 
     else if (/*tipo == "calculo2" && selecionado != "hidden"*/ !document.querySelector('.calculo2.hidden')){
@@ -98,7 +100,8 @@ function calcularConcentracao(){
         console.log(concentracao);
         console.log(volume);
         massa = concentracaoMassa * volumeMassa;
-        alert(`A massa é ${massa}`);
+        //alert(`A massa é ${massa}`);
+        resposta.innerHTML = `A massa é ${massa}. Para o volume ${volumeMassa} são dissolvidos ${massa} para manter a concentração em ${concentracaoMassa}.`;
     }
     else if (/*tipo == "calculo3" && selecionado != "hidden"*/!document.querySelector('.calculo3.hidden')){
         let massaVolume = parseFloat(document.getElementById('massaVolume').value);
@@ -106,7 +109,8 @@ function calcularConcentracao(){
         console.log(massa);
         console.log(concentracao);
         volume = massaVolume / concentracaoVolume;
-        alert(`O volume é ${volume}`);
+        //alert(`O volume é ${volume}`);
+        resposta.innerHTML = `O volume é ${volume}. Essa é a quantidade de solução para dissolver ${massaVolume} e manter a concentração ${concentracaoVolume}.`;
     }
     
 }
