@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Densidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="nav"> </div>
+    <div class="corpo">
+    <div id="header"></div>
+    
+    <main>
+        <div class="main">
+    <h2>Densidade</h2>
+    <p>Relação entra a massa de uma substância e o volume que ele ocupa. Pode ser entendido como a quantidade de material presente em um determinado espaço.</p>
+    <p>Um material mais denso ocupa menos espaço e é mais "pesado". Há mais massa presente em um espaço.</p>
+    <p>Uma forma de analisar a densidade é verificar se o objeto boia ou afunda na água. Sendo que objetos mais densos afundam e objetos menos densos baiam na água.</p>
+    <p>O que pesa mais: 1 kg de chumbo ou 1 kg de penas? A resposta é que os dois têm a mesma massa, mas o chumbo é mais denso e ocupará menos espaço que as penas.</p>
+    <figure><img></figure>
+    <h3>Cálculo da densidade</h3>
+    <p>A densidade é calculada pela divisão da massa pelo volume. Dessa forma é preciso saber o quanto de material tem em uma unidade de volume.</p>
+    <form>
+        <h4>Escolha o que deseja calcular</h4>
+        <select id="select" onchange="selecionarCalculo()">
+            <option value="">Selecionar</option>
+            <option value="1">Calcular densidade</option>
+            <option value="2">Calcular massa</option>
+            <option value="3">Calcular volume</option>
+        </select>
+    </form>
+    <form  class="calculo1 hidden densidade" >
+        <h4>Calcular concentração</h4>
+        <p>Para calcular a a densidade deve-se dividir a massa pelo volume. É necessário saber a massa e o volume.</p>
+        <label>Escreva o valor da massa</label>
+        <input type="number" id="massaDensidade" placeholder="Massa">
+        <label>Escreva o valor do volume</label>
+        <input type="number" id="volumeDensidade" placeholder="Volume">
+        <button type="button" onclick="calcularDensidade()">Calcular</button>
+    </form>
+    <form class="calculo2 hidden densidade">
+        <h4>Calcular massa</h4>
+        <p>Para calcular a massa é necessário saber a densidade e o volume. Reorganizando a fórmula temos a multiplicação da densidade e do volume.</p>
+        <label>Escreva o valor da concentração</label>
+        <input type="number" id="densidadeMassa" placeholder="Densidade">
+        <label>Escreva o valor do volume</label>
+        <input type="number" id="volumeMassa" placeholder="Volume">
+        <button type="button" onclick="calcularDensidade()">Calcular</button>
+    </form>
+    <form class="calculo3 hidden densidade">
+        <h4>Calcular volume</h4>
+        <p>Para calcular o volume é necessário saber a densidade e a massa. Divide-se a massa pela concentração</p>
+        <label>Escreva o valor da massa</label>
+        <input type="number" id="massaVolume" placeholder="Massa">
+        <label>Escreva o valor da concentração</label>
+        <input type="number" id="densidadeVolume" placeholder="Densidade">
+        <button type="button" onclick="calcularDensidade()">Calcular</button>
+    </form>
+    <h3>Resposta: </h3>
+    <div id="respostaDensidade">
+            
+    </div>
+</div>
+</main>
+<div id="footer"></div>
+</div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

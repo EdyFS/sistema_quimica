@@ -154,3 +154,27 @@ function calcularConcentracao(){
     limparCampos();
 }*/
 
+function calcularDensidade(){
+    let massa;
+    let volume;
+    let densidade;
+    let resposta = document.getElementById('respostaDensidade');
+    if (!document.querySelector('.calculo1.hidden')){
+        let massaDensidade = parseFloat(document.getElementById('massaDensidade').value);
+        let volumeDensidade = parseFloat(document.getElementById('volumeDensidade').value);
+        densidade = massaDensidade / volumeDensidade;
+        resposta.innerHTML = `A densidade é ${densidade}. O resultado foi obtido pela divisão da massa ${massaDensidade} pelo volume ${volumeDensidade}`;
+    } 
+    else if (!document.querySelector('.calculo2.hidden')){
+        let densidadeMassa = parseFloat(document.getElementById('densidadeMassa').value);
+        let volumeMassa = parseFloat(document.getElementById('volumeMassa').value);
+        massa = densidadeMassa * volumeMassa;
+        resposta.innerHTML = `A massa é ${massa}. Para o volume ${volumeMassa} são dissolvidos ${massa} para manter a concentração em ${densidadeMassa}.`;
+    }
+    else if (!document.querySelector('.calculo3.hidden')){
+        let massaVolume = parseFloat(document.getElementById('massaVolume').value);
+        let densidadeVolume = parseFloat(document.getElementById('densidadeVolume').value);
+        volume = massaVolume / densidadeVolume;
+        resposta.innerHTML = `O volume é ${volume}. Essa é a quantidade de solução para dissolver ${massaVolume} e manter a concentração ${densidadeVolume}.`;
+    }
+}
