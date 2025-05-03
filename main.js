@@ -178,3 +178,29 @@ function calcularDensidade(){
         resposta.innerHTML = `O volume é ${volume}. Essa é a quantidade de solução para dissolver ${massaVolume} e manter a concentração ${densidadeVolume}.`;
     }
 }
+
+function determinarSolucao(){
+    let solubilidade = parseFloat(document.getElementById('solubilidade').value);
+    let soluto = parseFloat(document.getElementById('soluto').value);
+        let resposta = document.getElementById('respostaEstadoFisico');
+    if (solubilidade < 0 || soluto < 0){
+        alert('Valores inválidos');
+    }
+    else{
+        if (soluto < solubilidade){
+            resposta.innerHTML = `A solução é insaturada. Está abaixo do limite.`;
+        }
+        else if (soluto == solubilidade){
+            resposta.innerHTML = `A solução é saturada. A quantidade de soluto atingiu o limite.`;
+        }
+        else if (soluto > solubilidade){
+            resposta.innerHTML = `A substância está no estado gasoso a ${temperatura}°C.A temperatura é maior que a Temperatura de ebulição, ou seja, já ferveu e virou vapor.`;
+            if (temperatura == temperaturaFusao){
+                resposta.innerHTML = `A substância está apresenta uma mistura entre os estados sólido e líquido a ${temperatura}°C. A substância está derretendo.`;
+            }
+            else if (temperatura == temperaturaEbulicao){
+                resposta.innerHTML = `A substância está apresenta uma mistura entre os estados líquido e gasoso a ${temperatura}°C. A substância está fervendo`
+            }
+        }
+    }
+}

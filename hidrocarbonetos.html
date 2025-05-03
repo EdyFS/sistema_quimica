@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Hidrocarbonetos</title>
 </head>
 <body>
+    <div id="nav"> </div>
+    <div class="corpo">
+        
+    <div id="header"> </div>
+    <main>
+        <div class="main">
+    <h2>Hidrocarbonetos</h2>
+    <h3>Hidrocarbonetos</h3>
+    <p>São compostos orgânicos formados apenas por carbono e hidrogênio. Se tiver outro elemento além desses não é um hidrocarboneto.</p>
+    <p>Exemplos: Metano - CH4, Propano - C3H8, Butano - C4H10.</p>
+    <h3>Tipos de Hidrocarboneto</h3>
+    <p>Os Hidrocarbonetos podem ser classificados como alcanos, alcenos e alcino.</p>
+    <p>Alcanos: são hidrocarbonetos contendo apenas ligações simples. Não têm ligações duplas ou triplas.</p>
+    <p>Alcenos: são hidrocarbonetos que contêm ligação dupla. Se tiver uma ligação dupla já é alceno, independente das ligações simples.</p>
+    <p>Alcinos: são hidrocarbonetos que contêm ligação tripla. Se tiver uma ligação tripla já é alcino, independente das ligações simples.</p> 
+    <h3>Determinação do tipo de hidrocarboneto</h3>
+    <p>É possivel diferenciar o tipo de hidrocarboneto pela quantidade de carbono e hidrogênio. Já que as ligações são diferentes, as quantidades de átomos serão diferentes.</p>
+    <form id="estados">
+        <label for="solubilidade">Escreva o valor da solubilidade:</label>
+        <input type="number" id="solubilidade"  placeholder="Solubilidade">
+        <br>
+        <label for="soluto">Escreva a quantidade do soluto:</label>
+        <input type="number" id="soluto" placeholder="Soluto">
+        <br>
+                <button type="button" onclick="determinarHidrocarboneto()">Determinar o tipo de solução</button>
+
+        
+
+    </form>
+    <h3>Resposta: </h3>
+    <div id="respostaEstadoFisico">
+            
+    </div>
+</div>
+</main>
     
-    
-    
+    <div id="footer"></div>
+</div>
+    <script src="main.js">
+        
+    </script>
 </body>
 </html>
