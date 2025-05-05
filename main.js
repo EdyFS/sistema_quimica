@@ -204,3 +204,21 @@ function determinarSolucao(){
         }
     }
 }
+
+function determinarHidrocarboneto(){
+    let carbono = parseFloat(document.getElementById('carbono').value);
+    let hidrogenio = parseFloat(document.getElementById('hidrogenio').value);
+    let resposta = document.getElementById('respostaHidrocarboneto');
+    if (hidrogenio == 2 * carbono +2){
+        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alcano`;
+    }
+    else if (hidrogenio == 2 * carbono ){
+        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alceno`;
+    }
+    else if (hidrogenio == 2 * carbono - 2){
+        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alcino`;
+    }
+    else{
+        resposta.innerHTML = 'Confira a quantidades. A molécula pode conter mais de um ligação múltipla ou está incorreta'
+    }
+}
