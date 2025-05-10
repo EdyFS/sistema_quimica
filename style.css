@@ -1,6 +1,6 @@
 body{
     background-color: lightcyan;
-    display: flex;
+    display: block;
     margin: 0;
 }
 
@@ -9,6 +9,7 @@ header{
     display: flex;
     position: static;
     justify-content: center;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: navy;
@@ -41,7 +42,7 @@ nav ul li{
 }
 
 .corpo{
-    display: block;
+    display: flex;
     width: 100%;
 }
 main{
@@ -49,6 +50,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 0em;
 }
 
 table{
@@ -59,10 +61,7 @@ th, td{
     border: solid black;
 }
 
-.main{
-    display: block;
 
-}
 footer{
     margin-bottom: 0;
     position: static;
