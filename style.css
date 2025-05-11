@@ -121,5 +121,6 @@ footer{
     
     main{
         margin: 0.5em;
+        width: fit-content;
     }
 }

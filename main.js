@@ -216,6 +216,27 @@ function determinarSolucao(){
     }
 }
 
+function verificarHidrocarboneto(){
+    let formula = document.getElementById('formula').value.toUpperCase();
+    let resultado;
+    let respostaZero = document.getElementById('respostaZero');
+    for(let i = 0;i < formula.length ;i++){
+        if (formula[i] != 'C' && formula[i] != 'H' && isNaN(parseInt(formula[i]))){
+            resultado = false;
+            break;
+        }
+        else{
+            resultado = true;
+        }
+    }
+    if(resultado == false){
+        respostaZero.innerHTML = 'Não é um hidrocarboneto';
+    }
+    else if(resultado == true){
+        respostaZero.innerHTML = 'É um hidrocarboneto';
+    }
+}
+
 function determinarHidrocarboneto(){
     let carbono = parseFloat(document.getElementById('carbono').value);
     let hidrogenio = parseFloat(document.getElementById('hidrogenio').value);
