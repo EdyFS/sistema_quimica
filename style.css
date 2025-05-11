@@ -41,6 +41,10 @@ nav ul li{
     display: none;
 }
 
+.desativa{
+    display: none;
+}
+
 .corpo{
     display: flex;
     width: 100%;
@@ -50,7 +54,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0em;
+    margin: 0em 10em;
 }
 
 table{
@@ -111,5 +115,11 @@ footer{
     display: block;
 }
 @media (max-width:700px){
-
+    .corpo{
+        display: block;
+    }
+    
+    main{
+        margin: 0.5em;
+    }
 }

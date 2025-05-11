@@ -10,6 +10,17 @@ fetch('header.html')
         .then(response => response.text())
             .then(data => document.getElementById('nav').innerHTML = data);
             
+
+            function ativaMenu(){
+                let menu = document.getElementById('menu');
+                if (menu.classList.contains('desativa')){
+                    menu.classList.remove('desativa');
+                }
+                else{
+                    menu.classList.add('desativa')
+                }
+            }
+
 function determinarEstado(){
     let temperaturaFusao = parseFloat(document.getElementById('temperaturaFusao').value);
     let temperaturaEbulicao = parseFloat(document.getElementById('temperaturaEbulicao').value);
