@@ -219,10 +219,12 @@ function determinarSolucao(){
 function verificarHidrocarboneto(){
     let formula = document.getElementById('formula').value.toUpperCase();
     let resultado;
+    let heteroatomo;
     let respostaZero = document.getElementById('respostaZero');
     for(let i = 0;i < formula.length ;i++){
         if (formula[i] != 'C' && formula[i] != 'H' && isNaN(parseInt(formula[i]))){
             resultado = false;
+            heteroatomo = formula[i];
             break;
         }
         else{
@@ -230,10 +232,10 @@ function verificarHidrocarboneto(){
         }
     }
     if(resultado == false){
-        respostaZero.innerHTML = 'Não é um hidrocarboneto';
+        respostaZero.innerHTML = `Não é um hidrocarboneto, pois tem um elemento diferente de C ou H, se tem ${heteroatomo} não é hidrocarboneto`;
     }
     else if(resultado == true){
-        respostaZero.innerHTML = 'É um hidrocarboneto';
+        respostaZero.innerHTML = 'É um hidrocarboneto, pois é formado apenas por C e H.';
     }
 }
 
