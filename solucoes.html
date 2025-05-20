@@ -35,12 +35,20 @@
         <input type="number" id="soluto" placeholder="Soluto">
         <br>
                 <button type="button" onclick="determinarSolucao()">Determinar o tipo de solução</button>
+                <div id="soluvel" class="precipitados hidden">
+                <p>Há precipitado?</p>
+                <input type="radio" class="precipitado" name="precipitado" value="1">
+                <label for="sim">Sim</label>
+                <input type="radio" class="precipitado" name="precipitado" value="2">
+                <label for="nao">Não</label>
+                
+                </div>
 
         
 
     </form>
     <h3>Resposta: </h3>
-    <div id="respostaEstadoFisico">
+    <div id="respostaSolucao">
             
     </div>
 </div>

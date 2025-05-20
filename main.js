@@ -191,30 +191,48 @@ function calcularDensidade(){
 }
 
 function determinarSolucao(){
+    let soluvel;
     let solubilidade = parseFloat(document.getElementById('solubilidade').value);
     let soluto = parseFloat(document.getElementById('soluto').value);
-        let resposta = document.getElementById('respostaEstadoFisico');
+        let resposta = document.getElementById('respostaSolucao');
     if (solubilidade < 0 || soluto < 0){
         alert('Valores inválidos');
     }
     else{
         if (soluto < solubilidade){
             resposta.innerHTML = `A solução é insaturada. Está abaixo do limite.`;
+            soluvel.classList.add('hidden');
         }
         else if (soluto == solubilidade){
             resposta.innerHTML = `A solução é saturada. A quantidade de soluto atingiu o limite.`;
-        }
+            soluvel.classList.add('hidden');
+        }    
         else if (soluto > solubilidade){
-            resposta.innerHTML = `A substância está no estado gasoso a ${temperatura}°C.A temperatura é maior que a Temperatura de ebulição, ou seja, já ferveu e virou vapor.`;
-            if (temperatura == temperaturaFusao){
-                resposta.innerHTML = `A substância está apresenta uma mistura entre os estados sólido e líquido a ${temperatura}°C. A substância está derretendo.`;
+            soluvel  = document.getElementById('soluvel');
+            soluvel.classList.remove('hidden');
+            let precipitado = document.querySelector('input[name="precipitado"]:checked');
+            if (precipitado){
+                if (precipitado.value === '1'){
+                resposta.innerHTML = `A solução é saturada com corpo de fundo. Dissolveu-se o máximo possível e o excesso foi para o fundo`;
             }
-            else if (temperatura == temperaturaEbulicao){
-                resposta.innerHTML = `A substância está apresenta uma mistura entre os estados líquido e gasoso a ${temperatura}°C. A substância está fervendo`
+            else if (precipitado.value === '2'){
+                resposta.innerHTML = `A solução é supersaturada. O limite foi atingido, mas o excesso permanece dissolvido após o aquecimento e resfriamento.`;
             }
+        }
+            
         }
     }
 }
+
+/*function verificar(){
+    let precipitado = document.querySelector('.precipitado').value;
+            if (precipitado == "1"){
+                resposta.innerHTML = `A solução é saturada com corpo de fundo. Dissolveu-se o máximo possível e o excesso foi para o fundo`;
+            }
+            else if (precipitado == "2"){
+                resposta.innerHTML = `A solução é supersaturada. O limite foi atingido, mas o excesso permanece dissolvido após o aquecimento e resfriamento.`
+            }
+}*/
 
 function verificarHidrocarboneto(){
     let formula = document.getElementById('formula').value.toUpperCase();
@@ -222,7 +240,7 @@ function verificarHidrocarboneto(){
     let heteroatomo;
     let respostaZero = document.getElementById('respostaZero');
     for(let i = 0;i < formula.length ;i++){
-        if (formula[i] != 'C' && formula[i] != 'H' && isNaN(parseInt(formula[i]))){
+        if (formula[i] != 'C' && formula[i] != 'H' && isNaN(parseInt(formula[i] )) && formula[i] != ' ' && formula[i] != '(' && formula[i] != ')' && formula[i] != '.' && formula[i] != '-' && formula[i] != '+' ){
             resultado = false;
             heteroatomo = formula[i];
             break;
