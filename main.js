@@ -191,7 +191,7 @@ function calcularDensidade(){
 }
 
 function determinarSolucao(){
-    let soluvel;
+    let soluvel  = document.getElementById('soluvel');
     let solubilidade = parseFloat(document.getElementById('solubilidade').value);
     let soluto = parseFloat(document.getElementById('soluto').value);
         let resposta = document.getElementById('respostaSolucao');
@@ -208,31 +208,33 @@ function determinarSolucao(){
             soluvel.classList.add('hidden');
         }    
         else if (soluto > solubilidade){
-            soluvel  = document.getElementById('soluvel');
             soluvel.classList.remove('hidden');
-            let precipitado = document.querySelector('input[name="precipitado"]:checked');
+            /*let precipitado = document.querySelector('input[name="precipitado"]:checked');
             if (precipitado){
                 if (precipitado.value === '1'){
                 resposta.innerHTML = `A solução é saturada com corpo de fundo. Dissolveu-se o máximo possível e o excesso foi para o fundo`;
             }
             else if (precipitado.value === '2'){
                 resposta.innerHTML = `A solução é supersaturada. O limite foi atingido, mas o excesso permanece dissolvido após o aquecimento e resfriamento.`;
-            }
+            }*/
         }
             
         }
     }
-}
+//}
 
-/*function verificar(){
-    let precipitado = document.querySelector('.precipitado').value;
-            if (precipitado == "1"){
+function verificar(){
+    let precipitado = document.querySelector('input[name="precipitado"]:checked').value;
+    let resposta = document.getElementById('respostaSolucao');
+            if (precipitado == '1'){
+                console.log(precipitado);
                 resposta.innerHTML = `A solução é saturada com corpo de fundo. Dissolveu-se o máximo possível e o excesso foi para o fundo`;
             }
-            else if (precipitado == "2"){
+            else if (precipitado == '2'){
+                console.log(precipitado);
                 resposta.innerHTML = `A solução é supersaturada. O limite foi atingido, mas o excesso permanece dissolvido após o aquecimento e resfriamento.`
             }
-}*/
+}
 
 function verificarHidrocarboneto(){
     let formula = document.getElementById('formula').value.toUpperCase();
