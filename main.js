@@ -212,16 +212,18 @@ function determinarSolucao(){
             /*let precipitado = document.querySelector('input[name="precipitado"]:checked');
             if (precipitado){
                 if (precipitado.value === '1'){
+                    console.log(precipitado);
                 resposta.innerHTML = `A solução é saturada com corpo de fundo. Dissolveu-se o máximo possível e o excesso foi para o fundo`;
             }
             else if (precipitado.value === '2'){
+                console.log(precipitado);
                 resposta.innerHTML = `A solução é supersaturada. O limite foi atingido, mas o excesso permanece dissolvido após o aquecimento e resfriamento.`;
-            }*/
-        }
+            }
+        }*/
             
         }
     }
-//}
+}
 
 function verificar(){
     let precipitado = document.querySelector('input[name="precipitado"]:checked').value;
