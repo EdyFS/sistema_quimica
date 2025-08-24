@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Concentração Molar</title>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <div class="corpo">
+        <div id="nav"> </div>
+    
+    <main>
+        <div class="main">
+    <h2>Concentração de Soluções</h2>
+    <p>Relação entra a quantidade de soluto dissolvido e a quantidade de solução. Mede o quanto de soluto foi dissolvido numa solução.</p>
+    <p>Quanto mais soluto dissolvido, maior a concentração.</p>
+    <figure><img></figure>
+    <h3>Concentração Molar</h3>
+    <p>A concentração é igual a quantidade em mol do soluto divido pelo volume da solução</p>
+    <form>
+        <h4>Escolha o que deseja calcular</h4>
+        <select id="select" onchange="selecionarCalculo()">
+            <option value="">Selecionar</option>
+            <option value="1">Calcular concentração molar</option>
+            <option value="2">Calcular número de mol</option>
+            <option value="3">Calcular volume</option>
+        </select>
+    </form>
+    <form  class="calculo1 hidden concentracao" >
+        <h4>Calcular concentração</h4>
+        <p>Para calcular a concentração deve-se dividir a massa pelo volume. É necessário saber a massa e o volume.</p>
+        <label>Escreva o valor da massa</label>
+        <input type="number" id="massaConcentracao" placeholder="Massa">
+        <label>Escreva o valor do volume</label>
+        <input type="number" id="volumeConcentracao" placeholder="Volume">
+        <button type="button" onclick="calcularConcentracao()">Calcular</button>
+    </form>
+    <form class="calculo2 hidden concentracao">
+        <h4>Calcular massa</h4>
+        <p>Para calcular a massa é necessário saber a concentração e o volume. Reorganizando a fórmula temos a multiplicação da concentração e do volume.</p>
+        <label>Escreva o valor da concentração</label>
+        <input type="number" id="concentracaoMassa" placeholder="Concentração">
+        <label>Escreva o valor do volume</label>
+        <input type="number" id="volumeMassa" placeholder="Volume">
+        <button type="button" onclick="calcularConcentracao()">Calcular</button>
+    </form>
+    <form class="calculo3 hidden concentracao">
+        <h4>Calcular volume</h4>
+        <p>Para calcular o volume é necessário saber a concentração e a massa. Divide-se a massa pela concentração</p>
+        <label>Escreva o valor da massa</label>
+        <input type="number" id="massaVolume" placeholder="Massa">
+        <label>Escreva o valor da concentração</label>
+        <input type="number" id="concentracaoVolume" placeholder="Concentração">
+        <button type="button" onclick="calcularConcentracao()">Calcular</button>
+    </form>
+    <h3>Resposta: </h3>
+    <div id="respostaConcentracao">
+            
+    </div>
+</div>
+</main>
+
+</div>
+<div id="footer"></div>
+    <script src="main.js"></script>
+</body>
+</html>
