@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Oxidação e Redução</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="corpo">
+        <div id="nav"></div>
+        <main>
+            <div class="main">
+            <h2>Reações de Oxidação e Redução</h2>
+            <p>Reações de oxidação ocorrem com a perda de elétrons</p>
+            <p>Reações de redução ocorrem com o ganho de elétrons</p>
+            <h2>Potencial de Redução</h2>
+            <p>Pode ser entendida como a capacidade de um elemento sofrer redução. Quanto maior o potencial, maior a chance do elemento sofrer redução.</p>
+            <h3>Cálculo do Potencial de uma Pilha</h3>
+            <form>
+                <label>Escreva o elemento 1: </label>
+                <input type="text" placeholder="Elemento 1"  id="elemento1">
+                <label>Escreva o potencial de elemento: </label>
+                <input type="number" placeholder="Potencial de Redução do Elemento 1" id="potencial1">
+                <label>Escreva o elemento 2: </label>
+                <input type="text" placeholder="Elemento 2" id="elemento2">
+                <label>Escreva o potencial de elemento: </label>
+                <input type="number" placeholder="Potencial de Redução do Elemento 2" id="potencial2">
+                <button type="button" onclick="calcularPotencial()">Calcular potencial</button>
+            </form>
+            <h3>Resposta:</h3>
+            <div id="respostaRedox" >
+
+            </div>
+            </div>
+        </main>
+    
+    </div>
+    
+    <div id="footer"></div>
+    <script src="main.js"></script>
+</body>
+</html>

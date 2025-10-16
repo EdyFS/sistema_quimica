@@ -266,15 +266,38 @@ function determinarHidrocarboneto(){
     let hidrogenio = parseFloat(document.getElementById('hidrogenio').value);
     let resposta = document.getElementById('respostaHidrocarboneto');
     if (hidrogenio == 2 * carbono +2){
-        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alcano`;
+        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alcano, pois tem fórmula Cn H2n+2`;
     }
     else if (hidrogenio == 2 * carbono ){
-        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alceno`;
+        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alceno, pois tem fórmula Cn H2n`;
     }
     else if (hidrogenio == 2 * carbono - 2){
-        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alcino`;
+        resposta.innerHTML = `A molécula C${carbono}H${hidrogenio} é um alcino, pois tem fórmula Cn H2n-2`;
     }
     else{
         resposta.innerHTML = 'Confira a quantidades. A molécula pode conter mais de um ligação múltipla ou está incorreta'
+    }
+}
+
+function calcularPotencial(){
+    let ddp;
+    let resposta = document.getElementById('respostaRedox');
+    let elemento1 = document.getElementById('elemento1').value;
+    let elemento2 = document.getElementById('elemento2').value;
+    let potencial1 = parseFloat(document.getElementById('potencial1').value);
+    let potencial2 = parseFloat(document.getElementById('potencial2').value);
+    if (potencial1 > potencial2){
+        ddp = potencial1 - potencial2;
+        resposta.innerHTML = `O elemento ${elemento1} sofre redução e o elemento ${elemento2} sofre oxidação. O potencial da pilha é ${ddp}`;
+    }
+    else if(potencial2 > potencial1){
+        ddp = potencial2 - potencial1;
+        resposta.innerHTML = ` elemento ${elemento2} sofre redução e o elemento ${elemento1} sofre oxidação. O potencial da pilha é ${ddp}`;
+    }
+    else if(potencial1 == potencial2){
+        resposta.innerHTML = `Os potenciais são iguais, a reação não deve acontecer.`;
+    }
+    else{
+        resposta.innerHTML = `Valores inválidos.`;
     }
 }

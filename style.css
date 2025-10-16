@@ -148,6 +148,11 @@ footer{
     margin: 1em;
     display: block;
 }
+
+#respostaHidrocarboneto{
+    font-size: 2em;
+}
+
 @media (max-width:700px){
     .corpo{
         display: block;
