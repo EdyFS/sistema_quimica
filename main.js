@@ -301,3 +301,15 @@ function calcularPotencial(){
         resposta.innerHTML = `Valores inválidos.`;
     }
 }
+
+function virarCard(card){
+    let ladoCartao = document.querySelector('card');
+    let perguntaCard = card.querySelector('.pergunta');
+    let respostaCard = card.querySelector('.resposta');
+    if(respostaCard.classList.contains('hidden')){
+        respostaCard.classList.remove('hidden');
+    }
+    else{
+        respostaCard.classList.add('hidden');
+    }
+}

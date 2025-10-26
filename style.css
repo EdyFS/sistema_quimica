@@ -161,6 +161,10 @@ button{
     font-size: 2em;
 }
 
+.card{
+    border: black solid 0.1em;
+}
+
 @media (max-width:700px){
     .corpo{
         display: block;
