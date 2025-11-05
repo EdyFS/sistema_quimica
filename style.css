@@ -119,12 +119,17 @@ button{
 .foot{
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .links{
     display: block;
-    padding: 1em;
+    padding: 0.5em;
+}
+
+.links a{
+    display: block;
+    margin: 0.5em;
 }
 
 #estados button{
@@ -161,8 +166,16 @@ button{
     font-size: 2em;
 }
 
+.secaoCartao{
+    display: block;
+    padding: 0.5em;
+}
+
 .card{
     border: black solid 0.1em;
+    background-color: aliceblue;
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
 @media (max-width:700px){
