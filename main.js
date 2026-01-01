@@ -302,6 +302,26 @@ function calcularPotencial(){
     }
 }
 
+function converterPH{
+    let pH = parseFloat(document.getElementById('pH').value);
+    let pOH = 14 - pH;
+    resposta.innerHTML = `O valor do pOH é ${pOH} quando o pH é ${pH}`;
+}
+
+function converterPOH{
+    let pOH = parseFloat(document.getElementById('pOH').value);
+    let pH = 14 - pOH;
+    resposta.innerHTML = `O valor do pH é ${pH} quando o pOH é ${pOH}`;
+}
+
+function calcularPH{
+
+}
+
+function calcularPOH{
+
+}
+
 function virarCard(card){
     let ladoCartao = document.querySelector('card');
     let perguntaCard = card.querySelector('.pergunta');
