@@ -187,4 +187,25 @@ button{
         margin: 0.5em;
         width: fit-content;
     }
+    #footer, .foot{
+        margin: 0.5em;
+        padding: 0;
+        display: block;
+        width: fit-content;
+    }
+
+    #footer h2{
+        padding: 0;
+        margin: 0;
+    }
+
+    .links h3{
+        padding: 0;
+        margin: 0;
+    }
+
+    .foot a{
+        display: block;
+    }
+
 }
