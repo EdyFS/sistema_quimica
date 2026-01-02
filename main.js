@@ -73,6 +73,20 @@ function selecionarCalculo(){
 
 }
 
+function selecionarCalculo2(){
+    let select = document.getElementById('select').value;
+    document.querySelector('.calculo1').classList.add('hidden');
+    document.querySelector('.calculo2').classList.add('hidden');
+    
+    if (select == "1"){
+        document.querySelector('.calculo1').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.querySelector('.calculo2').classList.remove('hidden');
+    }
+
+}
+
 function limparCampos(){
     /*let inputs = document.querySelectorAll('input');
     console.log(inputs);
@@ -303,15 +317,18 @@ function calcularPotencial(){
 }
 
 function converterPH(){
-    let pH = parseFloat(document.getElementById('pH').value);
+    if(!document.querySelector('.calculo1.hidden')){
+        let pH = parseFloat(document.getElementById('pH').value);
+    let resposta = document.getElementById('respostapH');
     let pOH = 14 - pH;
     resposta.innerHTML = `O valor do pOH é ${pOH} quando o pH é ${pH}`;
-}
-
-function converterPOH(){
-    let pOH = parseFloat(document.getElementById('pOH').value);
+    }
+    else if(!document.querySelector('.calculo2.hidden')){
+        let pOH = parseFloat(document.getElementById('pOH').value);
+    let resposta = document.getElementById('respostapH');
     let pH = 14 - pOH;
     resposta.innerHTML = `O valor do pH é ${pH} quando o pOH é ${pOH}`;
+    }
 }
 
 function calcularPH(){

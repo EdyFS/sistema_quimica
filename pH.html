@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Escala de pH</title>
 </head>
 <body>
     <div id="header"></div>
     <div class="corpo">
+        <div id="nav"></div>
         <main>
             <div class="main">
                 <h2>Escalas de pH e pOH</h2>
                 <p>Essas escalas são usadas para medir a acidez de um meio, geralmente, uma solução aquosa.</p>
                 <p>O pH é o potencial hidrogeniônico e determinado pela concentração de íons H+</p>
                 <p>O pOH é determinado pela concentração de íons OH-</p>
+                <p>Essas escalas vão de 0 a 14. A somatória dos valores de pH e pOH é 14</p>
+                <form>
+                    <p>Escolha o que deseja calcular</p>
+                    <select id="select" onchange="selecionarCalculo2()">
+                        <option value="">Selecionar</option>
+                        <option value="1">Converter pH para pOH</option>
+                        <option value="2">Converter pOH para pH</option>
+                    </select>
+                </form>
+                <form class="calculo1 hidden pH">
+                    <h4>Converter pH para pOH</h4>
+                    <label>Escreva o valor do pH:</label>
+                    <input type="number" id="pH" placeholder="Valor do pH">
+                    <button type="button" onclick="converterPH()">Calcular</button>
+                </form>
+                <form class="calculo2 hidden pH">
+                    <h4>Converter pOH para pH</h4>
+                    <label>Escreva o valor do pOH:</label>
+                    <input type="number" id="pOH" placeholder="Valor do pOH">
+                    <button type="button" onclick="converterPH()">Calcular</button>
+                </form>
+                <h3>Resposta</h3>
+                <div id="respostapH"></div>
+
                 <h3>Cálculo de pH</h3>
                 <p>A fórmula utilizada para calcular o ph é pH = -log(H+)</p>
                 <p>Deve-se aplicar as propriedades de logaritmo para realizar os cálculos.</p>
                 <p>Quando o valor que multiplica a potência é 1 o pH é igual ao expoente. Quando o valor é diferente de 1 o pH é igual ao expoeente menos o logaritmos do número que multiplica a potência</p>
                 <form>
-                    
+                    <p>Escolha o que deseja calcular</p>
+                    <select>
+                        <option value="">Selecionar</option>
+                        <option value="1">Calcular pH</option>
+                        <option value="2">Calcular pOH</option>
+                    </select>
+                </form>
+                <form>
+
                 </form>
             </div>
 
