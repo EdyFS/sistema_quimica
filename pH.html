@@ -41,20 +41,50 @@
                 <div id="respostapH"></div>
 
                 <h3>Cálculo de pH</h3>
-                <p>A fórmula utilizada para calcular o ph é pH = -log(H+)</p>
+                <p>A fórmula utilizada para calcular o ph é pH = -log[H+]</p>
                 <p>Deve-se aplicar as propriedades de logaritmo para realizar os cálculos.</p>
-                <p>Quando o valor que multiplica a potência é 1 o pH é igual ao expoente. Quando o valor é diferente de 1 o pH é igual ao expoeente menos o logaritmos do número que multiplica a potência</p>
+                <p>Quando o valor que multiplica a potência é 1 o pH é igual ao expoente. Quando o valor é diferente de 1 o pH é igual ao expoente menos o logaritmos do número que multiplica a potência</p>
                 <form>
                     <p>Escolha o que deseja calcular</p>
-                    <select>
+                    <select id="select4" onchange="selecionarCalculo4()">
                         <option value="">Selecionar</option>
                         <option value="1">Calcular pH</option>
                         <option value="2">Calcular pOH</option>
+                        <option value="3">Calcular a concentração de H+</option>
+                        <option value="4">Calcular a concentração de OH-</option>
                     </select>
                 </form>
-                <form>
+                <form class="calc1 hidden valorPH">
+                    <h4>Cálculo do pH</h4>
+                    <label>Insira o valor do número que múltiplica a potência</label>
+                    <input type="number" id="multiplicador" placeholder="Número que multiplica a potência">
+                    <label>Insira o expoente da potência</label>
+                    <input type="number" id="expoente" placeholder="Expoente">
+                    <button type="button" onclick="calcularPH()">Calcular</button>
 
                 </form>
+                <form class="calc2 hidden valorPH">
+                    <h4>Cálculo do pOH</h4>
+                    <label>Insira o valor do número que múltiplica a potência</label>
+                    <input type="number" id="multiplicador0" placeholder="Número que multiplica a potência">
+                    <label>Insira o expoente da potência</label>
+                    <input type="number" id="expoente0" placeholder="Expoente">
+                    <button type="button" onclick="calcularPH()">Calcular</button>
+                </form>
+                <form class="calc3 hidden valorPH">
+                    <h4>Cálculo da concentração de H<sub>+</sub></h4>
+                    <label>Insira o valor do pH</label>
+                    <input type="number" id="valorPH" placeholder="Valor do pH">
+                    <button type="button" onclick="calcularPH()">Calcular</button>
+                </form>
+                <form class="calc4 hidden valorPH">
+                    <h4>Cálculo da concentração de OH<sub>-</sub></h4>
+                    <label>Insira o valor do pOH</label>
+                    <input type="number" id="valorPOH" placeholder="Valor do pOH">
+                    <button type="button" onclick="calcularPH()">Calcular</button>
+                </form>
+                <h3>Resposta</h3>
+                <div id="respostaCalculoPH"></div>
             </div>
 
         </main>

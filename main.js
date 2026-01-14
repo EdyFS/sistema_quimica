@@ -87,6 +87,28 @@ function selecionarCalculo2(){
 
 }
 
+function selecionarCalculo4(){
+    let select = document.getElementById('select4').value;
+    document.querySelector('.calc1').classList.add('hidden');
+    document.querySelector('.calc2').classList.add('hidden');
+    document.querySelector('.calc3').classList.add('hidden');
+    document.querySelector('.calc4').classList.add('hidden');
+    
+    if (select == "1"){
+        document.querySelector('.calc1').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.querySelector('.calc2').classList.remove('hidden');
+    }
+    else if(select == "3"){
+        document.querySelector('.calc3').classList.remove('hidden');
+    }
+    else if(select == "4"){
+        document.querySelector('.calc4').classList.remove('hidden');
+    }
+
+}
+
 function limparCampos(){
     /*let inputs = document.querySelectorAll('input');
     console.log(inputs);
@@ -322,6 +344,7 @@ function converterPH(){
     let resposta = document.getElementById('respostapH');
     let pOH = 14 - pH;
     resposta.innerHTML = `O valor do pOH é ${pOH} quando o pH é ${pH}`;
+    console.log(`O valor do pOH é ${pOH} quando o pH é ${pH}`);
     }
     else if(!document.querySelector('.calculo2.hidden')){
         let pOH = parseFloat(document.getElementById('pOH').value);
@@ -332,12 +355,41 @@ function converterPH(){
 }
 
 function calcularPH(){
-
+    if(!document.querySelector('.calc1.hidden')){
+        let multiplicador = parseFloat(document.getElementById('multiplicador').value);
+        let expoente = parseFloat(document.getElementById('expoente').value);
+        let pH = -Math.log10(multiplicador*(10**expoente));
+        let respostaCalculoPH = document.getElementById('respostaCalculoPH');
+        respostaCalculoPH.innerHTML = `O valor do pH é ${pH.toFixed(2)}`;
+    }
+    else if(!document.querySelector('.calc2.hidden')){
+        let multiplicador0 = parseFloat(document.getElementById('multiplicador0').value);
+        let expoente0 = parseFloat(document.getElementById('expoente0').value);
+        let pOH = -Math.log10(multiplicador0*(10**expoente0));
+        let respostaCalculoPH = document.getElementById('respostaCalculoPH');
+        respostaCalculoPH.innerHTML = `O valor do pOH é ${pOH.toFixed(2)}`;
+    }
+    else if(!document.querySelector('.calc3.hidden')){
+        let pH = parseFloat(document.getElementById('valorPH').value);
+        let concentracaoH = Math.pow(10, -pH).toExponential(2);
+        let partes = concentracaoH.split('e');
+        let multiplicadorConcentracao = partes[0];
+        let expoenteConcentracao = partes[1];
+        let respostaCalculoPH = document.getElementById('respostaCalculoPH');
+        respostaCalculoPH.innerHTML = `O valor da concentração de H+ é ${multiplicadorConcentracao} x 10 ${expoenteConcentracao}`;
+    }
+    else if(!document.querySelector('.calc4.hidden')){
+        let pOH = parseFloat(document.getElementById('valorPOH').value);
+        let concentracaoOH = Math.pow(10, -pOH).toExponential(2);
+        let partes = concentracaoOH.split('e');
+        let multiplicadorConcentracao = partes[0];
+        let expoenteConcentracao = partes[1];
+        let respostaCalculoPH = document.getElementById('respostaCalculoPH');
+        respostaCalculoPH.innerHTML = `O valor da concentração de H+ é ${multiplicadorConcentracao} x 10 ${expoenteConcentracao}`;
+    }
 }
 
-function calcularPOH(){
 
-}
 
 function virarCard(card){
     let ladoCartao = document.querySelector('card');
