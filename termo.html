@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Termo Espectroscópico</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="corpo">
+        <div id="nav"></div>
+        <main>
+            <div class="main">
+                <h2>Termo Espectroscópico</h2>
+                <div id="grid-container">
+                    <div class="coluna-grid">
+                <form>
+                    <select id="selectMenos2" onchange="selecionarEletronMenos2()">
+                        <option value="">Selecionar</option>
+                        <option value="0">0</option>
+                        <option value="1">+1/2</option>
+                        <option value="2">-1/2</option>
+                        <option value="3">+1/2 e -1/2</option>
+                    </select>
+                                       
+                </form>
+
+                <p>-2</p>
+                <div class="orbital">
+                    
+                        <img src="imagens/Slide4160.jpg" class="orbita hidden" id="semEletronMenos2">
+                        <img src="imagens/Slide1160.jpg" class="orbita hidden" id="eletronMaisMenos2">
+                        <img src="imagens/Slide2160.jpg" class="orbita hidden" id="eletronMenosMenos2">
+                        <img src="imagens/Slide3160.JPG"class="orbita hidden" id="doisEletronsMenos2">
+                    </div>
+                    </div>
+                    <div class="coluna-grid">
+                    <form>
+                    <select id="selectMenos1" onchange="selecionarEletronMenos1()">
+                        <option value="">Selecionar</option>
+                        <option value="0">0</option>
+                        <option value="1">+1/2</option>
+                        <option value="2">-1/2</option>
+                        <option value="3">+1/2 e -1/2</option>
+                    </select>
+                                       
+                </form>
+                <p>-1</p>
+                <div class="orbital">
+                    
+                        <img src="imagens/Slide4160.JPG" class="orbita hidden" id="semEletronMenos1">
+                        <img src="imagens/Slide1160.JPG" class="orbita hidden" id="eletronMaisMenos1">
+                        <img src="imagens/Slide2160.JPG" class="orbita hidden" id="eletronMenosMenos1">
+                        <img src="imagens/Slide3160.JPG"class="orbita hidden" id="doisEletronsMenos1">
+                    </div>
+                    </div>
+                    <div class="coluna-grid">
+                    <form>
+                    <select id="select0" onchange="selecionarEletron0()">
+                        <option value="">Selecionar</option>
+                        <option value="0">0</option>
+                        <option value="1">+1/2</option>
+                        <option value="2">-1/2</option>
+                        <option value="3">+1/2 e -1/2</option>
+                    </select>
+                                       
+                </form>
+                <p>0</p>
+                <div class="orbital">
+                    
+                        <img src="imagens/Slide4160.JPG" class="orbita hidden" id="semEletron0">
+                        <img src="imagens/Slide1160.JPG" class="orbita hidden" id="eletronMais0">
+                        <img src="imagens/Slide2160.JPG" class="orbita hidden" id="eletronMenos0">
+                        <img src="imagens/Slide3160.JPG"class="orbita hidden" id="doisEletrons0">
+                    </div>
+                    </div>
+                    <div class="coluna-grid">
+                    <form>
+                    <select id="selectMais1" onchange="selecionarEletronMais1()">
+                        <option value="">Selecionar</option>
+                        <option value="0">0</option>
+                        <option value="1">+1/2</option>
+                        <option value="2">-1/2</option>
+                        <option value="3">+1/2 e -1/2</option>
+                    </select>
+                                       
+                </form>
+                <p>+1</p>
+                <div class="orbital">
+                    
+                        <img src="imagens/Slide4160.JPG" class="orbita hidden" id="semEletronMais1">
+                        <img src="imagens/Slide1160.JPG" class="orbita hidden" id="eletronMaisMais1">
+                        <img src="imagens/Slide2160.JPG" class="orbita hidden" id="eletronMenosMais1">
+                        <img src="imagens/Slide3160.JPG"class="orbita hidden" id="doisEletronsMais1">
+                    </div>
+                    </div>
+                    <div class="coluna-grid">
+                    <form>
+                    <select id="selectMais2" onchange="selecionarEletronMais2()">
+                        <option value="">Selecionar</option>
+                        <option value="0">0</option>
+                        <option value="1">+1/2</option>
+                        <option value="2">-1/2</option>
+                        <option value="3">+1/2 e -1/2</option>
+                    </select>
+                                       
+                </form>
+                <p>+2</p>
+                <div class="orbital">
+                    
+                        <img src="imagens/Slide4160.JPG" class="orbita hidden" id="semEletronMais2">
+                        <img src="imagens/Slide1160.JPG" class="orbita hidden" id="eletronMaisMais2">
+                        <img src="imagens/Slide2160.JPG" class="orbita hidden" id="eletronMenosMais2">
+                        <img src="imagens/Slide3160.JPG"class="orbita hidden" id="doisEletronsMais2">
+                    </div>
+                    </div>
+                </div>
+                <form>
+                        <button type="button" onclick="determinarTermo()">Determinar termo Espectroscópico</button>
+                    </form>
+                    <div id="resposta">
+
+                    </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="footer"></div>
+    <script src="main.js"></script>
+</body>
+</html>

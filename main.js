@@ -402,3 +402,254 @@ function virarCard(card){
         respostaCard.classList.add('hidden');
     }
 }
+
+function selecionarEletronMenos2(){
+    let select = document.getElementById('selectMenos2').value;
+    document.getElementById('semEletronMenos2').classList.add('hidden');
+    document.getElementById('eletronMaisMenos2').classList.add('hidden');
+    document.getElementById('eletronMenosMenos2').classList.add('hidden');
+    document.getElementById('doisEletronsMenos2').classList.add('hidden');
+    
+    if (select == "0"){
+        document.getElementById('semEletronMenos2').classList.remove('hidden');
+    }
+    else if(select == "1"){
+        document.getElementById('eletronMaisMenos2').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.getElementById('eletronMenosMenos2').classList.remove('hidden');
+    }
+    else if(select == "3"){
+        document.getElementById('doisEletronsMenos2').classList.remove('hidden');
+    }
+}
+
+function selecionarEletronMenos1(){
+    let select = document.getElementById('selectMenos1').value;
+    document.getElementById('semEletronMenos1').classList.add('hidden');
+    document.getElementById('eletronMaisMenos1').classList.add('hidden');
+    document.getElementById('eletronMenosMenos1').classList.add('hidden');
+    document.getElementById('doisEletronsMenos1').classList.add('hidden');
+    
+    if (select == "0"){
+        document.getElementById('semEletronMenos1').classList.remove('hidden');
+    }
+    else if(select == "1"){
+        document.getElementById('eletronMaisMenos1').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.getElementById('eletronMenosMenos1').classList.remove('hidden');
+    }
+    else if(select == "3"){
+        document.getElementById('doisEletronsMenos1').classList.remove('hidden');
+    }
+}
+
+function selecionarEletron0(){
+    let select = document.getElementById('select0').value;
+    document.getElementById('semEletron0').classList.add('hidden');
+    document.getElementById('eletronMais0').classList.add('hidden');
+    document.getElementById('eletronMenos0').classList.add('hidden');
+    document.getElementById('doisEletrons0').classList.add('hidden');
+    
+    if (select == "0"){
+        document.getElementById('semEletron0').classList.remove('hidden');
+    }
+    else if(select == "1"){
+        document.getElementById('eletronMais0').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.getElementById('eletronMenos0').classList.remove('hidden');
+    }
+    else if(select == "3"){
+        document.getElementById('doisEletrons0').classList.remove('hidden');
+    }
+}
+
+function selecionarEletronMais1(){
+    let select = document.getElementById('selectMais1').value;
+    document.getElementById('semEletronMais1').classList.add('hidden');
+    document.getElementById('eletronMaisMais1').classList.add('hidden');
+    document.getElementById('eletronMenosMais1').classList.add('hidden');
+    document.getElementById('doisEletronsMais1').classList.add('hidden');
+    
+    if (select == "0"){
+        document.getElementById('semEletronMais1').classList.remove('hidden');
+    }
+    else if(select == "1"){
+        document.getElementById('eletronMaisMais1').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.getElementById('eletronMenosMais1').classList.remove('hidden');
+    }
+    else if(select == "3"){
+        document.getElementById('doisEletronsMais1').classList.remove('hidden');
+    }
+}
+
+function selecionarEletronMais2(){
+    let select = document.getElementById('selectMais2').value;
+    document.getElementById('semEletronMais2').classList.add('hidden');
+    document.getElementById('eletronMaisMais2').classList.add('hidden');
+    document.getElementById('eletronMenosMais2').classList.add('hidden');
+    document.getElementById('doisEletronsMais2').classList.add('hidden');
+    
+    if (select == "0"){
+        document.getElementById('semEletronMais2').classList.remove('hidden');
+    }
+    else if(select == "1"){
+        document.getElementById('eletronMaisMais2').classList.remove('hidden');
+    }
+    else if(select == "2"){
+        document.getElementById('eletronMenosMais2').classList.remove('hidden');
+    }
+    else if(select == "3"){
+        document.getElementById('doisEletronsMais2').classList.remove('hidden');
+    }
+}
+
+function determinarTermo(){
+    let mlMenos2, mlMenos1, ml0, mlMais1, mlMais2;
+    let msMenos2, msMenos1, ms0, msMais1, msMais2;
+    
+    //Valores do Orbital -2
+    let orbitalMenos2 = document.getElementById('selectMenos2').value;
+    if(orbitalMenos2 == "0"){
+        mlMenos2 = 0;
+        msMenos2 = 0;
+    }
+    else if(orbitalMenos2 == "1"){
+        mlMenos2 = -2;
+        msMenos2 = 0.5;
+    }
+    else if(orbitalMenos2 == "2"){
+        mlMenos2 = -2;
+        msMenos2 = -0.5;
+    }
+    else if(orbitalMenos2 == "3"){
+        mlMenos2 = -4;
+        msMenos2 = 0;
+    }
+
+    //Valores do Orbital -1
+    let orbitalMenos1 = document.getElementById('selectMenos1').value;
+    if(orbitalMenos1 == "0"){
+        mlMenos1 = 0;
+        msMenos1 = 0;
+    }
+    else if(orbitalMenos1 == "1"){
+        mlMenos1 = -1;
+        msMenos1 = 0.5;
+    }
+    else if(orbitalMenos1 == "2"){
+        mlMenos1 = -1;
+        msMenos1 = -0.5;
+    }
+    else if(orbitalMenos1 == "3"){
+        mlMenos1 = -2;
+        msMenos1 = 0;
+    }
+
+    //Valores do Orbital 0
+    let orbital0 = document.getElementById('select0').value;
+    if(orbital0 == "0"){
+        ml0 = 0;
+        ms0 = 0;
+    }
+    else if(orbital0 == "1"){
+        ml0 = 0;
+        ms0 = 0.5;
+    }
+    else if(orbital0 == "2"){
+        ml0 = 0;
+        ms0 = -0.5;
+    }
+    else if(orbital0 == "3"){
+        ml0 = 0;
+        ms0 = 0;
+    }
+
+    //Valores do Orbital +1
+    let orbitalMais1 = document.getElementById('selectMais1').value;
+    if(orbitalMais1 == "0"){
+        mlMais1 = 0;
+        msMais1 = 0;
+    }
+    else if(orbitalMais1 == "1"){
+        mlMais1 = 1;
+        msMais1 = 0.5;
+    }
+    else if(orbitalMais1 == "2"){
+        mlMais1 = 1;
+        msMais1 = -0.5;
+    }
+    else if(orbitalMais1 == "3"){
+        mlMais1 = 2;
+        msMais1 = 0;
+    }
+
+    //Valores do Orbital +2
+    let orbitalMais2 = document.getElementById('selectMais2').value;
+    if(orbitalMais2 == "0"){
+        mlMais2 = 0;
+        msMais2 = 0;
+    }
+    else if(orbitalMais2 == "1"){
+        mlMais2 = 2;
+        msMais2 = 0.5;
+    }
+    else if(orbitalMais2 == "2"){
+        mlMais2 = 2;
+        msMais2 = -0.5;
+    }
+    else if(orbitalMais2 == "3"){
+        mlMais2 = 4;
+        msMais2 = 0;
+    }
+
+    let S = msMenos2 + msMenos1 + ms0 + msMais1 + msMais2;
+    let L = mlMenos2 + mlMenos1 + ml0 + mlMais1 + mlMais2;
+    let multiplicidade = 2*S + 1;
+    if (multiplicidade <= -1){
+        multiplicidade = multiplicidade * -1;
+    }
+    if (L <= -1){
+        L = L * -1;
+    }
+    let termo;
+    if(L == 0){
+        termo = "S";
+    }
+    else if(L == 1){
+        termo = "P";
+    }
+    else if(L == 2){
+        termo = "D";
+    }
+    else if(L == 3){
+        termo = "F";
+    }
+    else if(L == 4){
+        termo = "G";
+    }
+    else if(L == 5){
+        termo = "H";
+    }
+    else if(L == 6){
+        termo = "I";
+    }
+    else if(L == 7){
+        termo = "J";
+    }
+    else if(L == 8){
+        termo = "K";
+    }
+    else if(L == 9){
+        termo = "L";
+    }
+    else if(L == 10){
+        termo = "M";
+    }
+    let resposta = document.getElementById('resposta');
+    resposta.innerHTML = `O termo espectroscópico para essa <sup>${multiplicidade}</sup> ${termo}`;
+}
