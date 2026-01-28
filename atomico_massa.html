@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Atômico e Número de Massa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="corpo">
+        <div id="nav"> </div>
+
+        <main>
+            <div class="main">
+                <h2>Número Atômico</h2>
+                <p>Número que indica o elemento químico. É definido pelo número de prótons(p). É representado pela letra
+                    Z</p>
+                <p>Z = p</p>
+                <h2>Número de Massa</h2>
+                <p>Número que indica a massa de um átomo. Como a massa do átomo está concentrada no núcleo, é
+                    determinado pela soma de prótons(p) e nêutrons(n). É representado pela letra A</p>
+                <p>A = p + n</p>
+                <form>
+                    <h4>Escolha o que deseja calcular</h4>
+                    <select id="select" onchange="selecionarCalculo2()">
+                        <option value="">Selecionar</option>
+                        <option value="1">Calcular número atômico e número de massa</option>
+                        <option value="2">Calcular número de prótons, nêutros e elétrons</option>
+                    </select>
+                </form>
+                <form class="calculo1 hidden concentracao">
+                    <h4>Calcular número atômico e número de massa</h4>
+                    <p>Para calcular a concentração deve-se dividir a massa pelo volume. É necessário saber a massa e o
+                        volume.</p>
+                    <label>Escreva o número de prótons</label>
+                    <input type="number" id="protons" placeholder="Número de prótons">
+                    <label>Escreva o número de nêutrons</label>
+                    <input type="number" id="neutrons" placeholder="Número de nêutrons">
+                    <button type="button" onclick="calcularAtomicoMassa()">Calcular</button>
+                </form>
+                <form class="calculo2 hidden concentracao">
+                    <h4>Calcular número de prótons, nêutrons e elétrons</h4>
+                    <p>Para calcular a massa é necessário saber a concentração e o volume. Reorganizando a fórmula temos
+                        a multiplicação da concentração e do volume.</p>
+                    <label>Escreva o número atômico</label>
+                    <input type="number" id="atomico" placeholder="Número atômico">
+                    <label>Escreva o número de massa</label>
+                    <input type="number" id="massa" placeholder="Número de Massa">
+                    <label>É um íon?(Tem carga?)</label>
+                    <input type="radio" class="neutro" name="neutro" value="1">
+                    <label for="sim">Sim</label>
+                    <input type="radio" class="neutro" name="neutro" value="2">
+                    <label for="nao">Não</label>
+                    <label>Qual a carga?</label>
+                    <input type="number" id="carga" placeholder="Carga">
+                    <button type="button" onclick="calcularAtomicoMassa()">Calcular</button>
+                </form>
+                
+                <h3>Resposta: </h3>
+                <div id="resposta">
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <div id="footer"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -653,3 +653,20 @@ function determinarTermo(){
     let resposta = document.getElementById('resposta');
     resposta.innerHTML = `O termo espectroscópico para essa <sup>${multiplicidade}</sup> ${termo}`;
 }
+
+function calcularAtomicoMassa(){
+    let proton, neutron, massa, atomico, eletron;
+    if(!document.querySelector('.calculo1.hidden')){
+        proton = document.getElementById('proton').value;
+        neutron = document.getElementById('neutron').value;
+        let Z = proton;
+        let A = proton + neutron;
+    }
+    else if(!document.querySelector('.calculo2.hidden')){
+        massa = document.getElementById('massa').value;
+        atomico = document.getElementById('atomico').value;
+        let p = atomico;
+        let n = massa - atomico;
+        
+    }
+}
