@@ -655,18 +655,21 @@ function determinarTermo(){
 }
 
 function calcularAtomicoMassa(){
-    let proton, neutron, massa, atomico, eletron;
+    let proton, neutron, massa, atomico, eletron, resposta;
     if(!document.querySelector('.calculo1.hidden')){
-        proton = document.getElementById('proton').value;
-        neutron = document.getElementById('neutron').value;
+        proton = parseInt(document.getElementById('protons').value);
+        neutron = parseInt(document.getElementById('neutrons').value);
         let Z = proton;
         let A = proton + neutron;
+        resposta = document.getElementById('resposta');
+        resposta.innerHTML = `O número atômico é ${Z}. O número de massa é ${A}.`;
     }
     else if(!document.querySelector('.calculo2.hidden')){
-        massa = document.getElementById('massa').value;
-        atomico = document.getElementById('atomico').value;
+        massa = parseInt(document.getElementById('massa').value);
+        atomico = parseInt(document.getElementById('atomico').value);
         let p = atomico;
         let n = massa - atomico;
-        
+        resposta = document.getElementById('resposta');
+        resposta.innerHTML = `O número de prótons é ${p}. O número de nêutrons é ${n}.`;
     }
 }
