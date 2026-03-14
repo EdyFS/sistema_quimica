@@ -608,6 +608,9 @@ function determinarTermo(){
     }
 
     let S = msMenos2 + msMenos1 + ms0 + msMais1 + msMais2;
+    if (S < 0){
+        S = Math.sqrt((S**2));
+    }
     let L = mlMenos2 + mlMenos1 + ml0 + mlMais1 + mlMais2;
     let multiplicidade = 2*S + 1;
     if (multiplicidade <= -1){
