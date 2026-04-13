@@ -159,7 +159,7 @@ button{
     display: block;
 }
 
-#respostaHidrocarboneto, #respostaCalculoPH, #respostaZero, #resposta{
+#respostaHidrocarboneto, #respostaCalculoPH, #respostaZero, #resposta, #respostaEstadoFisico{
     font-size: 2em;
 }
 
