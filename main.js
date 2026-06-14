@@ -676,3 +676,23 @@ function calcularAtomicoMassa(){
         resposta.innerHTML = `O número de prótons é ${p}. O número de nêutrons é ${n}.`;
     }
 }
+
+function determinarGeometria(){
+    let geometria, arranjo;
+    let pares = document.getElementById('pares_eletrons').value;
+    let ligacoes_quimicas = document.getElementById('ligacoes').value;
+    let nuvens = pares_eletrons + ligacoes_quimicas;
+    if(nuvens == 1 || nuvens == 2){
+        resposta = document.getElementById('resposta');
+        resposta.innerHTML = `O arranjo é linear. A geometria é linear.`;
+    }
+    else if(nuvens == 3){
+        arranjo = "Bipirâmide trigonal";
+        if(ligacoes_quimicas == 1){
+            geometria = "Linear"
+            resposta = document.getElementById('resposta');
+            resposta.innerHTML = `O arranjo é linear. A geometria é linear.`;
+        }
+        
+    }
+}

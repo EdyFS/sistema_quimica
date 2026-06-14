@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometria Molecular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="corpo">
+        <div id="nav"></div>
+        <main>
+            <div class="main">
+            <h2>Geometria Molecular</h2>
+            <p>Geometria molecular está relacionada à organização das nuvens eletrônicas no espaço.</p>
+            <p>Nuvens eletrônicas são pares de elétrons livres ou ligações químicas</p>
+            <p>Pela Teoria da Repulsão dos Elétrons de Valência(VSPER) as núvens eletrônicas devem estar o mais afastadas possível, por causa da repulsão entre os elétrons.</p>
+            <h3>Arranjo</h3>
+            <h3>Geometria</h3>
+            <form>
+                <label>Escreva o número de pares eletrônicos: </label>
+                <input type="number" placeholder="Número de pares de elétrons"  id="pares_eletrons">
+                <label>Escreva o número de ligações químicas: </label>
+                <input type="number" placeholder="Números de ligações químicas" id="ligacoes">
+                <button type="button" onclick="determinarGeometria()">Determinar geometria</button>
+            </form>
+            <h3>Resposta:</h3>
+            <div id="resposta" >
+
+            </div>
+            </div>
+        </main>
+    
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
