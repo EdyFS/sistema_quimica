@@ -397,10 +397,13 @@ function virarCard(card){
     let respostaCard = card.querySelector('.resposta');
     if(respostaCard.classList.contains('hidden')){
         respostaCard.classList.remove('hidden');
+        perguntaCard.classList.add('hidden');
     }
     else{
         respostaCard.classList.add('hidden');
+        perguntaCard.classList.remove('hidden');
     }
+    
 }
 
 function selecionarEletronMenos2(){
@@ -693,6 +696,9 @@ function determinarGeometria(){
             resposta = document.getElementById('resposta');
             resposta.innerHTML = `O arranjo é linear. A geometria é linear.`;
         }
+        
+    }
+    else if(nuvens == 4){
         
     }
 }
