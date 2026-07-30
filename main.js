@@ -397,6 +397,19 @@ function virarCard(card){
     let respostaCard = card.querySelector('.resposta');
     if(respostaCard.classList.contains('hidden')){
         respostaCard.classList.remove('hidden');
+    }
+    else{
+        respostaCard.classList.add('hidden');
+    }
+    
+}
+
+function virarCard0(card){
+    let ladoCartao = document.querySelector('card');
+    let perguntaCard = card.querySelector('.pergunta');
+    let respostaCard = card.querySelector('.resposta');
+    if(respostaCard.classList.contains('hidden')){
+        respostaCard.classList.remove('hidden');
         perguntaCard.classList.add('hidden');
     }
     else{

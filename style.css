@@ -175,6 +175,38 @@ button{
     margin: 0.5em;
 }
 
+.secaoCartaoJogo{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    
+}
+
+.cardJogo{
+    border: black solid 0.1em;
+    background-color: aliceblue;
+    width: 20em;
+    height: 10em;
+    margin: 0.25em 0.25em;
+    padding: 0.25em;
+}
+
+.cardJogo .pergunta{
+    font-size: 4em;
+}
+
+.cardJogo .resposta{
+    font-size: 4em;
+    margin: 0em;
+}
+.cardJogo .resposta img{
+    
+    padding: 0em;
+}
+
+
 #grid-container{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
